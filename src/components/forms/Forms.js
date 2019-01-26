@@ -203,16 +203,15 @@ const Forms = ({
               }}
             />
             <Dropdown
-              additionLabel="provincia"
-              placeholder="Provincia"
+              additionLabel="distrito"
+              placeholder="Distrito"
               selection
-              disabled={!provincies.length}
-              options={mapProvicies}
-              style={{ width: 200, marginLeft: ".5em", marginBottom: ".5em" }}
-              onChange={(e, { value, additionLabel, text }) => {
-                handleChange(additionLabel, e.target.textContent);
-                getDistricts(value);
-              }}
+              disabled={!districts.length}
+              options={mapDistricts}
+              style={{ width: 300, marginLeft: ".5em", marginBottom: ".5em" }}
+              onChange={(e, { additionLabel }) =>
+                handleChange(additionLabel, e.target.textContent)
+              }
             />
           </React.Fragment>
         ) : (
