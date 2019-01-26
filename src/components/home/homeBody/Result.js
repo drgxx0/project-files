@@ -5,12 +5,15 @@ import { Segment, Button, Icon, Header } from 'semantic-ui-react'
 
 import * as UIActions from 'store/actions/UIActions'
 
-const Success = ({ message, registerError, restoreApp }) => {
+const Success = ({ message, registerError, restoreApp, disabledButton }) => {
     return (
         <Segment style={{backgroundColor: 'rgba(255,255,255,0.7)', width: '50%', marginLeft: '25%'}} >
             <Icon name={registerError ? 'x' : 'check circle'} size='massive' color={registerError ? 'red' : 'green'} />
             <Header as='h4'>{message}</Header>
-            <Button color='black' onClick={restoreApp}>Atras</Button>
+            <Button color='black' onClick={() => {
+                disabledButton()
+                restoreApp()
+                }}>Atras</Button>
         </Segment>
     )
 }

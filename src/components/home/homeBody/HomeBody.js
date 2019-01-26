@@ -89,6 +89,13 @@ class HomeBody extends Component {
   };
 
 
+  disabledButton = () => {
+    this.setState({
+      disabled: true
+    })
+  }
+
+
   render() {
     const { active, handleActiveButton, status, message, mobile, history } = this.props;
 
@@ -145,7 +152,7 @@ class HomeBody extends Component {
             />
 
             {status ? (
-              <Result message={message} />
+              <Result message={message} disabledButton={this.disabledButton} />
             ) : (
             <React.Fragment>
                 <Responsive maxWidth={767}>
