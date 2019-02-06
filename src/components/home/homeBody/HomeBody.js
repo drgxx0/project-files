@@ -120,7 +120,7 @@ class HomeBody extends Component {
           <Grid.Column width={16}>
             <Header
               as="h2"
-              content="Elese te da la bienvenida a la feria Excon 2018"
+              content="Bienvenidos a la pagina de prueba"
               style={{
                 color: "#fff",
                 fontWeight: "bold"
